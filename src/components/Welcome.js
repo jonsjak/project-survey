@@ -5,9 +5,12 @@ export const Welcome = () => {
     <div className="welcome-container">
       <h2>A survey about surveys</h2>
       <p>The following survey is about your experience of surveys. 
-        Please answer as truthfully and accurate as possible. 
-        Your answers will be presented to you at the end of the survey.
-        The survey takes approximately 3 minutes to complete. Best of luck!</p>
+        Please answer as truthfully and accurate as possible.
+      </p>
+      <p>
+       Your answers will be presented to you at the end of the survey.
+        The survey takes approximately 3 minutes to complete.
+      </p>
     </div>
   )
 }

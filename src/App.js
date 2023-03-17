@@ -13,8 +13,12 @@ export const App = () => {
   const [answer3, setAnswer3] = useState(0);
   const [answer4, setAnswer4] = useState('');
   
-  const questionHandler = () => {
+  const nextHandler = () => {
     setCounter(counter + 1);
+  };
+
+  const backHandler = () => {
+    setCounter(counter - 1);
   };
 
   const restartSurvey = () => {
@@ -23,20 +27,17 @@ export const App = () => {
     setAnswer2('');
     setAnswer3(0);
     setAnswer4('');
-  }
-
-  const buttonText = () => {
-    if (counter === 0) {
-      return 'Start survey';
-    } else {
-      return 'Next question';
-    }
   };
-
+  
   return (
     <div className="main-container">
       {counter === 0 && (
-        <Welcome />
+        <>
+          <Welcome />
+          <button type="button" onClick={nextHandler}>
+          Start survey
+          </button>
+        </>
       )}
       {counter === 1 && (
         <Question1 answer1={answer1} setAnswer1={setAnswer1} />
@@ -51,22 +52,30 @@ export const App = () => {
         <Question4 answer4={answer4} setAnswer4={setAnswer4} />
       )}
       {counter > 4 && (
-        <Summary
-          answer1={answer1}
-          answer2={answer2}
-          answer3={answer3}
-          answer4={answer4} />
+        <>
+          <Summary
+            answer1={answer1}
+            answer2={answer2}
+            answer3={answer3}
+            answer4={answer4} />
+          <button type="button" onClick={restartSurvey}>
+          Restart survey
+          </button>
+        </>
       )}
-      {/* Changes the button depending on the question */}
-      {counter < 5 ? (
-        <button type="button" onClick={questionHandler}>
-          {buttonText()}
-        </button>
-      ) : (
-        <button type="button" onClick={restartSurvey}>
-        Restart survey
-        </button>
-      )}
+      <div className="button-container">
+        {counter > 0 && (
+          <button type="button" onClick={backHandler}>
+          Back
+          </button>
+        )
+        }
+        {counter > 0 && counter < 5 && (
+          <button type="button" onClick={nextHandler}>
+            Next
+          </button>
+        )}
+      </div>
     </div>
-  ) 
+  ); 
 };

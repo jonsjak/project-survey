@@ -12,12 +12,11 @@ export const Question4 = ({ answer4, setAnswer4}) => {
         meaning that the people who choose to participate 
         may not be representative of the broader population. 
         This can lead to inaccurate conclusions being drawn from the data.</p>
-      <p>Please provide some information about yourself that would demonstrate 
+      <p className="italic">Please provide some information about yourself that would demonstrate 
             that you are a typical human being:
       </p>
       <label htmlFor="bio">Write something about yourself
-        <input name="bio" id="bio" type="text" placeholder="Write here..." value={answer4} onChange={q4Handler}/>
-        <button type="submit">Submit text</button>
+        <textarea name="bio" id="bio" rows="4" cols="20" placeholder="Write here..." value={answer4} onChange={q4Handler}/>
       </label>
     </div>
   )

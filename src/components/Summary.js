@@ -5,8 +5,10 @@ export const Summary = ({ answer1, answer2, answer3, answer4 }) => {
     <div>
       <h2>Result</h2>
       <p>Thank you for taking this survey. Hopefully your contribution 
-        will help mankind understand that surveys are often unwanted and extremely boring! 
-        Theese are the insights you provided:</p>
+        will help mankind understand that surveys are often unwanted and extremely boring!
+      </p>
+      <p className="italic">Theese are the insights you provided:
+      </p>
       <ul>
         <li>Question 1: Respondent Fatigue
           <ul>

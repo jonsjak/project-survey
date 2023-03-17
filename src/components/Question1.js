@@ -10,7 +10,7 @@ export const Question1 = ({ answer1, setAnswer1 }) => {
       <h3>Question 1</h3>
       <p>People tend to grow tired of surveys as they are often time-consuming and repetitive.</p>
       <p>To what degree do you agree with the following statement?</p>
-      <p>“I often skip surveys because they are too boring to fill out”</p>
+      <p className="italic">“I often skip surveys because they are too boring to fill out”</p>
   
       <label htmlFor="strongly-disagree">
         <input type="radio" name="q1-answer1" id="strongly-disagree" value="strongly-disagree" checked={answer1 === "strongly-disagree"} onChange={q1Handler} />
