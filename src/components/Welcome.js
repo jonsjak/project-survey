@@ -3,7 +3,6 @@ import React from 'react';
 export const Welcome = () => {
   return (
     <div className="welcome-container">
-      <h2>A survey about surveys</h2>
       <p>The following survey is about your experience of surveys. 
         Please answer as truthfully and accurate as possible.
       </p>

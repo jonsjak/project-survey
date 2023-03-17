@@ -34,7 +34,7 @@ export const App = () => {
       {counter === 0 && (
         <>
           <Welcome />
-          <button type="button" onClick={nextHandler}>
+          <button className="start-button" type="button" onClick={nextHandler}>
           Start survey
           </button>
         </>

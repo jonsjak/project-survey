@@ -23,15 +23,18 @@ header{
 }
 
 h1{
- font-size: 40px;
+ font-size: 42px;
  font-weight: 800;
- margin-top: -86px;
- color: rgb(196, 255, 208);
+ margin-top: -120px;
+ color: white;
  text-shadow: 2px 2px 5px black;
 }
 
 h2{
   font-family: 'Verdana', sans-serif;
+  margin-top: -25px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
 }
 
 p{
@@ -42,6 +45,7 @@ p{
 
 .italic{
   font-style: italic;
+  font-weight: bold;
 }
 
 img{
@@ -51,11 +55,14 @@ img{
 }
 
 .main-container{
-  margin: 50px auto;
-  width: 90%;
-  background-color: rgb(211 248 203);
+  margin: 40px auto;
+  width: 95%;
+  background-color: rgb(250 255 248);
   gap: 50px;
-  padding: 20px;
+  padding: 4px;
+  text-align: center;
+  box-shadow: -1px 2px 100px black;
+  padding: 30px 6px;
 }
 .welcome-container{
   display: flex;
@@ -64,17 +71,94 @@ img{
 }
 
 button{
-  border-radius: 10px;
-  background: rgb(10,36,0);
-  background: linear-gradient(90deg, rgb(113, 223, 167) 2%, rgb(50, 167, 188) 82%, rgb(6, 137, 113) 100%);
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  font-size: 16px;
-  border: none;
-  padding: 5px;
+  border-radius: 12px;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 145px;
+  background: #dcd6c3;
+  padding: 14px;
+}
+
+button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+button:active{
+  transform: translateY(2px);
 }
 
 .button-container{
-  margin-top: 50px;
+  margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 18px;
+}
+
+.start-button{
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.radio-form{
+  display: flex;
+    justify-content: space-evenly;
+    margin-top: 31px;
+    align-items: flex-start;
+    background-color: rgb(123 158 93);
+    background-image: linear-gradient(to right, rgb(233 245 232) , rgb(148 217 87));
+    border-radius: 36px;
+    padding: 16px;
+    gap: 12px;
+}
+
+.radio-form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    font-size: 14px;
+}
+
+select{
+  background-color: rgb(248 245 229);
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.select-form{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select-form label{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.honesty-form{
+  background-color: rgb(123 158 93);
+    background-image: linear-gradient(to right, rgb(233 245 232) , rgb(148 217 87));
+    text-align: center;
+    font-size: 22px;
+    padding: 12px 36px;
+    border-radius: 24px;
+}
+
+.honesty-form label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: -20px;
+}
+
+.scale{
   display: flex;
   justify-content: space-between;
 }
