@@ -4,8 +4,6 @@ export const Question4 = ({ answer4, setAnswer4}) => {
   const q4Handler = (event) => {
     event.preventDefault();
     setAnswer4(event.target.value);
-    console.log(answer4);
-
   }
   return (
     <div>

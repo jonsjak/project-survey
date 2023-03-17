@@ -12,12 +12,29 @@ export const App = () => {
   const [answer2, setAnswer2] = useState('');
   const [answer3, setAnswer3] = useState(0);
   const [answer4, setAnswer4] = useState('');
+  
   const questionHandler = () => {
     setCounter(counter + 1);
   };
 
+  const restartSurvey = () => {
+    setCounter(0);
+    setAnswer1('');
+    setAnswer2('');
+    setAnswer3(0);
+    setAnswer4('');
+  }
+
+  const buttonText = () => {
+    if (counter === 0) {
+      return 'Start survey';
+    } else {
+      return 'Next question';
+    }
+  };
+
   return (
-    <div>
+    <div className="main-container">
       {counter === 0 && (
         <Welcome />
       )}
@@ -34,13 +51,22 @@ export const App = () => {
         <Question4 answer4={answer4} setAnswer4={setAnswer4} />
       )}
       {counter > 4 && (
-        <Summary />
+        <Summary
+          answer1={answer1}
+          answer2={answer2}
+          answer3={answer3}
+          answer4={answer4} />
       )}
-      <button
-        type="button"
-        onClick={questionHandler}>
-        {counter === 0 ? 'Start survey' : 'Next question'}
-      </button>
+      {/* Changes the button depending on the question */}
+      {counter < 5 ? (
+        <button type="button" onClick={questionHandler}>
+          {buttonText()}
+        </button>
+      ) : (
+        <button type="button" onClick={restartSurvey}>
+        Restart survey
+        </button>
+      )}
     </div>
-  )
+  ) 
 };

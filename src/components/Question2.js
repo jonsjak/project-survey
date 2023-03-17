@@ -3,7 +3,6 @@ import React from 'react';
 export const Question2 = ({ answer2, setAnswer2 }) => {
   const q2Handler = (event) => {
     setAnswer2(event.target.value);
-    console.log(answer2);
   };
 
   return (
