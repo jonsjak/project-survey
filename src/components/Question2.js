@@ -10,7 +10,7 @@ export const Question2 = ({ answer2, setAnswer2 }) => {
       <h3>Question 2</h3>
       <p>Another problem is that the wording sometimes
         makes it hard to understand what kind of answer is expected.</p>
-      <p className="italic">Is there, in your opinion, a positive correlation between
+      <p className="question-text">Is there, in your opinion, a positive correlation between
         the utilization of a highly abstract language in the textual content,
         and the level of difficulty in comprehension experienced by you as a reader?</p>
       <form className="select-form">

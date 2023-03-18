@@ -12,7 +12,7 @@ export const Question3 = ({ answer3, setAnswer3 }) => {
         especially if they feel their responses could be viewed negatively.
         This can result in respondents providing answers that they think are socially desirable,
         rather than truly reflective of their thoughts and experiences.</p>
-      <p className="italic">How honest are you when taking surveys?</p>
+      <p className="question-text">How honest are you when taking surveys?</p>
       <form className="honesty-form">
         <label htmlFor="honesty-range">Rate your honesty level
           <input className="honesty-range" id="honestyRange" name="honesty-range" type="range" min="0" max="10" value={answer3} onChange={q3Handler} />
