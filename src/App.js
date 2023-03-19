@@ -16,6 +16,7 @@ export const App = () => {
   const nextHandler = () => {
     setCounter(counter + 1);
   };
+  console.log(counter)
 
   const backHandler = () => {
     setCounter(counter - 1);
@@ -32,12 +33,7 @@ export const App = () => {
   return (
     <div className="main-container">
       {counter === 0 && (
-        <>
-          <Welcome />
-          <button className="start-button" type="button" onClick={nextHandler}>
-          Start survey
-          </button>
-        </>
+        <Welcome nextHandler={nextHandler} />  
       )}
       {counter === 1 && (
         <Question1 answer1={answer1} setAnswer1={setAnswer1} />
@@ -58,7 +54,7 @@ export const App = () => {
             answer2={answer2}
             answer3={answer3}
             answer4={answer4} />
-          <button type="button" onClick={restartSurvey}>
+          <button className="restart-button"type="button" onClick={restartSurvey}>
           Restart survey
           </button>
         </>
@@ -71,9 +67,12 @@ export const App = () => {
         )
         }
         {counter > 0 && counter < 5 && (
-          <button type="button" onClick={nextHandler}>
-            Next
-          </button>
+          <>
+            <p>Question: {counter}/4</p>
+            <button type="button" onClick={nextHandler}>
+              Next
+            </button>
+          </>
         )}
       </div>
     </div>

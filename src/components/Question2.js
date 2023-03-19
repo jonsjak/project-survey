@@ -15,11 +15,14 @@ export const Question2 = ({ answer2, setAnswer2 }) => {
         and the level of difficulty in comprehension experienced by you as a reader?</p>
       <form className="select-form">
         <label htmlFor="Answer2-select">Pick your answer:
-          <select name="Answer2-select" onChange={q2Handler} value={answer2}>
+          <select 
+            name="Answer2-select" 
+            onChange={q2Handler} 
+            value={answer2}>
             <option value="default">Choose option</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
-            <option value="don't understand">I don not understand</option>
+            <option value="don't understand">I do not understand</option>
           </select>
         </label>
       </form>
