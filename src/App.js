@@ -12,11 +12,10 @@ export const App = () => {
   const [answer2, setAnswer2] = useState('');
   const [answer3, setAnswer3] = useState(0);
   const [answer4, setAnswer4] = useState('');
-  
+
   const nextHandler = () => {
     setCounter(counter + 1);
   };
-  console.log(counter)
 
   const backHandler = () => {
     setCounter(counter - 1);
@@ -29,11 +28,11 @@ export const App = () => {
     setAnswer3(0);
     setAnswer4('');
   };
-  
+ 
   return (
     <div className="main-container">
       {counter === 0 && (
-        <Welcome nextHandler={nextHandler} />  
+        <Welcome nextHandler={nextHandler} />
       )}
       {counter === 1 && (
         <Question1 answer1={answer1} setAnswer1={setAnswer1} />
@@ -54,7 +53,7 @@ export const App = () => {
             answer2={answer2}
             answer3={answer3}
             answer4={answer4} />
-          <button className="restart-button"type="button" onClick={restartSurvey}>
+          <button className="restart-button" type="button" onClick={restartSurvey}>
           Restart survey
           </button>
         </>

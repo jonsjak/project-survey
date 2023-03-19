@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
 export const Summary = ({ answer1, answer2, answer3, answer4 }) => {
   return (
     <div>
       <h3>Result</h3>
-      <p>Thank you for taking this survey. Hopefully your contribution 
+      <p>Thank you for taking this survey. Hopefully your contribution
         will help mankind understand that surveys are often unwanted and extremely boring!
       </p>
       <p className="question-text">Theese are the insights you provided:
       </p>
       <ul className="summary-list">
         <li>Respondent Fatigue
-          <p>Your answer: {answer1}</p> 
+          <p>Your answer: {answer1}</p>
         </li>
         <li>Complicated wording
           <p>Your answer: {answer2}</p>

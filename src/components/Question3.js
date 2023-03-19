@@ -8,8 +8,8 @@ export const Question3 = ({ answer3, setAnswer3 }) => {
   return (
     <div>
       <h3>Question 3</h3>
-      <p>Respondents may not provide truthful responses to sensitive questions for fear 
-        of negative perception, resulting in socially desirable answers 
+      <p>Respondents may not provide truthful responses to sensitive questions for fear
+        of negative perception, resulting in socially desirable answers
         instead of authentic ones.
       </p>
       <p className="question-text">How honest are you when taking surveys?</p>

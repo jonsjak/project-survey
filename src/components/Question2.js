@@ -9,15 +9,17 @@ export const Question2 = ({ answer2, setAnswer2 }) => {
     <div>
       <h3>Question 2</h3>
       <p>Another problem is that the wording sometimes
-        makes it hard to understand what kind of answer is expected.</p>
+        makes it hard to understand what kind of answer is expected.
+      </p>
       <p className="question-text">Is there, in your opinion, a positive correlation between
         the utilization of a highly abstract language in the textual content,
-        and the level of difficulty in comprehension experienced by you as a reader?</p>
+        and the level of difficulty in comprehension experienced by you as a reader?
+      </p>
       <form className="select-form">
         <label htmlFor="Answer2-select">Pick your answer:
-          <select 
-            name="Answer2-select" 
-            onChange={q2Handler} 
+          <select
+            name="Answer2-select"
+            onChange={q2Handler}
             value={answer2}>
             <option value="default">Choose option</option>
             <option value="yes">Yes</option>
